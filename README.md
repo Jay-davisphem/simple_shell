@@ -21,8 +21,7 @@
 > have more functionality. Our shell is a simple version that handles memory leaks
 > very well and has basic functionality. You can create/write/read/open/remove
 > folders, print things to the terminal, change directories, print where you are
-> in the system, etc. [To read more on how a shell works behind the scenes, visit
-> our blog here](https://medium.com/@MelissaNg__/how-a-shell-works-8a5a461c1910).
+> in the system, etc.
 
 ## Synopsis
 
@@ -136,3 +135,4 @@ $ exit
 ### Authors
 
 [David Oluwafemi](https://twitter.com/oluw4femi)
+[Enoch Ayinde]()
