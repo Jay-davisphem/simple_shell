@@ -4,6 +4,7 @@
  * ctrl_c - ignore Ctrl-C input and prints prompt again
  * @n: takes in int from signal
  */
+
 void ctrl_c(int n)
 {
 	(void)n;
@@ -18,6 +19,7 @@ void ctrl_c(int n)
  * @command: bring in command to free
  * Return: 1 if acted on builtin, 0 if not
  */
+
 int built_in(char **token, list_t *env, int num, char **command)
 {
 	int i = 0;
@@ -88,6 +90,7 @@ void ctrl_D(int i, char *command, list_t *env)
  * @en: envrionmental variables
  * Return: 0 on success
  */
+
 int prompt(char **en)
 {
 	list_t *env;
