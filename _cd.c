@@ -4,8 +4,10 @@
  * c_strcat - concatenate two strings ignoring the first character ("~" in cd)
  * @dest: string to be appended to
  * @src: string to append
+ *
  * Return: concatenated string
  */
+
 char *c_strcat(char *dest, char *src)
 {
 	int len = 0;
@@ -45,8 +47,10 @@ char *c_strcat(char *dest, char *src)
  * @env: environmental variable linked list
  * @name: environmental variable name (e.g. "OLDPWD")
  * @dir: directory path (e.g. "/home/vagrant/directory1")
+ *
  * Return: 0 on success (e.g. "OLDPWD=/home/vagrant/directory1")
  */
+
 int c_setenv(list_t **env, char *name, char *dir)
 {
 	int index = 0, j = 0;
@@ -76,6 +80,7 @@ int c_setenv(list_t **env, char *name, char *dir)
  * @env: bring in environmental linked list to update PATH and OLDPWD
  * @current: bring in current working directotry
  */
+
 void cd_only(list_t *env, char *current)
 {
 	char *home = NULL;
@@ -91,6 +96,7 @@ void cd_only(list_t *env, char *current)
 	free(current);
 	free(home);
 }
+
 /**
  * cd_execute - executes the cd
  * @env: bring in environmental linked list to update PATH and OLDPWD
@@ -98,8 +104,10 @@ void cd_only(list_t *env, char *current)
  * @dir: bring in directory path to change to
  * @str: bring in the 1st argument to write out error
  * @num: bring in the line number to write out error
+ *
  * Return: 0 if success 2 if fail
  */
+
 int cd_execute(list_t *env, char *current, char *dir, char *str, int num)
 {
 	int i = 0;
