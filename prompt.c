@@ -60,6 +60,7 @@ int built_in(char **token, list_t *env, int num, char **command)
  * @str: string
  * Return: new string
  */
+
 char *ignore_space(char *str)
 {
 	while (*str == ' ')
