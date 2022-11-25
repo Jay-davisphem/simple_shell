@@ -5,6 +5,7 @@
  * @env: environmental variables
  * Return: linked list
  */
+
 list_t *env_linked_list(char **env)
 {
 	list_t *head;
@@ -25,6 +26,7 @@ list_t *env_linked_list(char **env)
  * @env: environmental variables
  * Return: 0 on success
  */
+
 int _env(char **str, list_t *env)
 {
 	free_double_ptr(str); /* frees user input */

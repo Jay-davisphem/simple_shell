@@ -5,6 +5,7 @@
  * @str: user's typed command
  * @env: input the linked list of envirnment
  */
+
 void c_exit(char **str, list_t *env)
 {
 	free_double_ptr(str);
@@ -19,6 +20,7 @@ void c_exit(char **str, list_t *env)
  * @num: nth user command; to be used in error message
  * Return: 0 on success
  */
+
 int _execve(char **s, list_t *env, int num)
 {
 	char *holder;

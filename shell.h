@@ -18,6 +18,7 @@
  * @var: holds environmental variable string
  * @next: points to next node
  */
+
 typedef struct list
 {
 	char *var;
@@ -26,7 +27,7 @@ typedef struct list
 } list_t;
 
 /* function prototypes */
-int prompt(char **env);
+int prompt(char **en);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 size_t get_line(char **str);
 int t_strlen(char *str, int pos, char delm);

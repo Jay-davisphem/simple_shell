@@ -4,6 +4,7 @@
  * ctrl_c - ignore Ctrl-C input and prints prompt again
  * @n: takes in int from signal
  */
+
 void ctrl_c(int n)
 {
 	(void)n;
@@ -18,6 +19,7 @@ void ctrl_c(int n)
  * @command: bring in command to free
  * Return: 1 if acted on builtin, 0 if not
  */
+
 int built_in(char **token, list_t *env, int num, char **command)
 {
 	int i = 0;
@@ -58,6 +60,7 @@ int built_in(char **token, list_t *env, int num, char **command)
  * @str: string
  * Return: new string
  */
+
 char *ignore_space(char *str)
 {
 	while (*str == ' ')
@@ -88,6 +91,7 @@ void ctrl_D(int i, char *command, list_t *env)
  * @en: envrionmental variables
  * Return: 0 on success
  */
+
 int prompt(char **en)
 {
 	list_t *env;
@@ -103,7 +107,8 @@ int prompt(char **en)
 		else
 			non_interactive(env);
 		signal(SIGINT, ctrl_c); /* makes ctrl+c not work */
-		command = NULL; i = 0; /* reset vars each time loop runs */
+		command = NULL;
+		i = 0; /* reset vars each time loop runs */
 		i = get_line(&command); /* read user's cmd in stdin */
 		ctrl_D(i, command, env); /* exits shell if ctrl-D */
 		n_command = command;
@@ -114,9 +119,11 @@ int prompt(char **en)
 		command[n] = '\0';
 		if (command[0] == '\0') /* reprompt if user hits enter only */
 		{
-			free(n_command); continue;
+			free(n_command);
+			continue;
 		}
-		token = NULL; token = _str_tok(command, " "); /*token user cmd*/
+		token = NULL;
+		token = _str_tok(command, " "); /*token user cmd*/
 		if (n_command != NULL)
 			free(n_command);
 		exit_stat = built_in(token, env, command_line_no, NULL);

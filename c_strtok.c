@@ -4,8 +4,10 @@
  * c_t_size - returns number of delim
  * @str: user's command typed into shell
  * @delm: delimeter (e.g. " ");
+ *
  * Return: number of tokens
  */
+
 int c_t_size(char *str, char delm)
 {
 	int i = 0, num_delm = 0;
@@ -27,9 +29,11 @@ int c_t_size(char *str, char delm)
  * (e.g. path --> ":/bin::/bin/usr" )
  * @str: user's command typed into shell
  * @delm: delimeter (e.g. " ");
+ *
  * Return: an array of tokens (e.g. {"\0", "/bin", "\0", "/bin/usr"}
  * (purpose is to have which command look through current directory if ":")
  */
+
 char **c_str_tok(char *str, char *delm)
 {
 	int buffsize = 0, p = 0, si = 0, i = 0, len = 0, se = 0;
